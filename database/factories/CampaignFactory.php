@@ -17,10 +17,6 @@ class CampaignFactory extends Factory
     public function definition(): array
     {
         return [
-            'channel' => $this->faker->company(),
-            'source' => $this->faker->sentence(),
-            'campaign_name' => $this->faker->sentence(),
-            'target_url' => $this->faker->url(),
             'user_id' =>  rand(1, 50)
         ];
     }
