@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Campaign extends Model
+class Input extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
 
-    public function inputs()
+    public function campaign()
     {
-        return $this->hasMany(Input::class);
+        return $this->belongsTo(Campaign::class);
     }
 }
