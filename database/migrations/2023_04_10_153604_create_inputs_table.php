@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('campaigns', function (Blueprint $table) {
+        Schema::create('inputs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger("user_id");
+            $table->string("channel", 255);
+            $table->string("source", 255);
+            $table->string("campaign_name", 255);
+            $table->string("target_url", 255);
+            $table->foreignId("campaign_id")->constrained("campaigns")->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -23,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('campaigns');
+        Schema::dropIfExists('inputs');
     }
 };
