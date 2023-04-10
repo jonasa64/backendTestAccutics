@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CampaignStoreRequest;
 use App\Http\Resources\CampaignResource;
 use App\Models\Campaign;
-use App\Models\Input;
-use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class CampaignController extends Controller
