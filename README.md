@@ -7,7 +7,7 @@ There are some factories for campaigns and inputs. To get some fake data into th
 
 ## Tests
 
-There are some tests for the create campaign endpoint and get all campaigns. To run the test use the following command php artisan test.
+There are some tests for the create campaign, get all campaigns, search user by email and get all users. To run the test use the following command php artisan test.
 
 ## Api endpoints
 
