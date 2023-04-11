@@ -17,16 +17,14 @@ class UserRepository implements UserRepositoryInterface
     {
         if (count(self::$users) == 0) {
             for ($i = 1; $i <= 20; $i++) {
-                UserRepository::add($i, "Test user " . $i, "test@mail$i.dk");
+                UserRepository::add($i, "Test user" . $i, "test@mail$i.dk");
             }
         }
 
         return self::$users;
     }
 
-    public static function getByName($name)
-    {
-    }
+
     /**
      *
      * @param int $user_id
@@ -45,6 +43,24 @@ class UserRepository implements UserRepositoryInterface
             ];
         }
         return;
+    }
+    /**
+     *
+     * @param string $email
+     * @param string $name
+     * @return null|mixed
+     */
+    public static function searchUser($email, $name)
+    {
+        $users = self::getAll();
+        $user = null;
+        for ($i = 0; $i < count($users); $i++) {
+            if ($users[$i]["email"] == $email || $users[$i]["name"] == $name) {
+                $user = $users[$i];
+                break;
+            }
+        }
+        return $user;
     }
 
     /**

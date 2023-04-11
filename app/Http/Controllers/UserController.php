@@ -13,16 +13,21 @@ class UserController extends Controller
      *
      * @return JsonResponse
      */
-    public function index()
+    public function index(Request $request)
     {
+        $email = $request->email ?? "";
+        $name = urldecode($request->name) ?? "";
+
         $users = UserRepository::getAll();
+        if (!empty($email) || !empty($name)) {
+            $user = UserRepository::searchUser($email, $name);
 
+            // Check user was found
+            if ($user)
+                return new JsonResponse(["user" => $user], 200);
+            else
+                return new JsonResponse(["message" => "user not found"], 404);
+        }
         return new JsonResponse(["users" => $users], 200);
-    }
-
-    public function searchByName(Request $request)
-    {
-        $user = UserRepository::getByName(urldecode($request->name));
-        return new JsonResponse(["user" => $user], 200);
     }
 }

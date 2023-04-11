@@ -23,4 +23,3 @@ use Illuminate\Support\Facades\Route;
 Route::post("/campaigns", [CampaignController::class, 'store']);
 Route::get("/campaigns", [CampaignController::class, 'index']);
 Route::get("/users", [UserController::class, 'index']);
-Route::get("/users/name", [UserController::class, 'searchByName']);
