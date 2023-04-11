@@ -21,10 +21,11 @@ class CampaignController extends Controller
         // Check if page_size is present otherwise default to 20 
         $pageSize = $request->page_size ?? 20;
         // Order by query params
-        $columName = $request->order_by ?? "id";
+        $campaignColumName = $request->campaign_order_by ?? "id";
+        $inputColumName = $request->input_order_by ?? "campaign_name";
         $sortOrder = $request->sort_order ??  "DESC";
         // Get Paginated campaigns eager load input relationships 
-        $campaigns = Campaign::with("inputs")->orderBy($columName, $sortOrder)->paginate($pageSize);
+        $campaigns = Campaign::with("inputs")->orderBy($campaignColumName, $sortOrder)->paginate($pageSize);
         // Return json response
         return CampaignResource::collection($campaigns);
     }
