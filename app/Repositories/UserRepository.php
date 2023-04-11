@@ -55,6 +55,7 @@ class UserRepository implements UserRepositoryInterface
         $users = self::getAll();
         $user = null;
         for ($i = 0; $i < count($users); $i++) {
+            // Check if email or name match what is search for
             if ($users[$i]["email"] == $email || $users[$i]["name"] == $name) {
                 $user = $users[$i];
                 break;

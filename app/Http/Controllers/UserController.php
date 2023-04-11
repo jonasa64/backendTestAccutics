@@ -15,10 +15,13 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
+        // Get email and name from request
         $email = $request->email ?? "";
         $name = urldecode($request->name) ?? "";
 
         $users = UserRepository::getAll();
+
+        // Check that email or name was provided
         if (!empty($email) || !empty($name)) {
             $user = UserRepository::searchUser($email, $name);
 
