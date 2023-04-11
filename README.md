@@ -1,13 +1,13 @@
 ## How to get Some data into database
 
-There is provided factories for campaigns and inputs. To get some fake data in to the database. To get the you need to run the following commands also make sure you have created a database.
+There are some factories for campaigns and inputs. To get some fake data into the database. To get it you need to run the following commands and also make sure you have created a database.
 
 -   php artisan migrate (creates all the database tables)
 -   php artisan db:seed (seeds the database tables with fake data)
 
 ## Tests
 
-There are made some test for the create campaign endpoint and get all campaigns. To run the test use the following command php artisan test.
+There are some tests for the create campaign endpoint and get all campaigns. To run the test use the following command php artisan test.
 
 ## Api endpoints
 
