@@ -63,12 +63,12 @@ query param: page_size=10 (number of campaigns per page. By default page_size is
 ### /api/campaigns
 
 Method: post<br>
-body data: {
-"channel" : " new test channel 5",
-"source" : "new test source 5",
-"campaign_name": "new test campaign 5",
-"target_url": "new test url 5",
-"user_id": 7
+body data: {<br>
+"channel" : " new test channel 5",<br>
+"source" : "new test source 5",<br>
+"campaign_name": "new test campaign 5",<br>
+"target_url": "new test url 5",<br>
+"user_id": 7<br>
 } <br>
 channel: string required length max 255 <br>
 source: string required length max 255 <br>
@@ -83,13 +83,13 @@ accept: application/json
 
 Method: get <br>
 response: {
-users: [
-{
-"user_id": 1,
-"name": "test user 1",
-"email": "test@mail1.dk",
-"campaigns": 3
-}
-]
+users: [<br>
+{<br>
+"user_id": 1,<br>
+"name": "test user 1",<br>
+"email": "test@mail1.dk",<br>
+"campaigns": 3<br>
+}<br>
+]<br>
 } <br>
 Content-Type: application/json<br>
