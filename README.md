@@ -92,4 +92,6 @@ users: [<br>
 }<br>
 ]<br>
 } <br>
+query param: ?email=test@mail$10.dk (200 if user is found else 404)<br>
+query param: ?name=Test+user10 (200 if user is found else 404)<br>
 Content-Type: application/json<br>
