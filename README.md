@@ -14,45 +14,46 @@ There are made some test for the create campaign endpoint and get all campaigns.
 ### /api/campaigns
 
 Method: Get<br>
-response: data: {
-[
-{
-"id": 410,
-"userId": 7,
-"inputs": [
-{
-"id": 208,
-"channel": "new test channel 5",
-"source": "new test source 5",
-"name": "new test campaign 5",
-"url": "new test url 5"
-}
-],
-"created_at": "2023-04-10 18:00:08"
-},
-], "links": {
-"first": "http://localhost:8000/api/campaigns?page=1",
-"last": "http://localhost:8000/api/campaigns?page=21",
-"prev": null,
-"next": "http://localhost:8000/api/campaigns?page=2"
-},
-"meta": {
-"current_page": 1,
-"from": 1,
-"last_page": 21,
-"links": [
-{
-"url": null,
-"label": "&laquo; Previous",
-"active": false
-},
-{
-"url": "http://localhost:8000/api/campaigns?page=1",
-"label": "1",
-"active": true
-}
-]
-}
+response: data: {<br>
+[<br>
+{<br>
+"id": 410,<br>
+"userId": 7,<br>
+"inputs": [<br>
+{<br>
+"id": 208,<br>
+"channel": "new test channel 5",<br>
+"source": "new test source 5",<br>
+"name": "new test campaign 5",<br>
+"url": "new test url 5"<br>
+}<br>
+],<br>
+"created_at": "2023-04-10 18:00:08"<br>
+},<br>
+],<br>
+"links": {<br>
+"first": "http://localhost:8000/api/campaigns?page=1",<br>
+"last": "http://localhost:8000/api/campaigns?page=21",<br>
+"prev": null,<br>
+"next": "http://localhost:8000/api/campaigns?page=2"<br>
+},<br>
+"meta": {<br>
+"current_page": 1,<br>
+"from": 1,<br>
+"last_page": 21,<br>
+"links": [<br>
+{<br>
+"url": null,<br>
+"label": "&laquo; Previous",<br>
+"active": false<br>
+},<br>
+{<br>
+"url": "http://localhost:8000/api/campaigns?page=1",<br>
+"label": "1",<br>
+"active": true<br>
+}<br>
+]<br>
+}<br>
 }<br>
 Content-Type: application/json<br>
 query param: campaign_order_by=created_at (order by creation date. By default campaign_order_by order by campaign id)<br>
